@@ -53,6 +53,12 @@ QuorumTrust/
 └── documents/            # Shared documents root
 ```
 
+## Architecture Decisions
+
+See [docs/adr](docs/adr/README.md) for architecture decision records covering
+the threshold signing, governance quorum, peer coordination, and document edit
+model choices.
+
 ## Quick Start
 
 ### Build the Node
