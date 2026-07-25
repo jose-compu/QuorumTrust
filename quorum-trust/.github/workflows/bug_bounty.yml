@@ -1,0 +1,28 @@
+name: Bug Bounty & Feature Request Program
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+jobs:
+  bounty-info:
+    runs-on: ubuntu-latest
+    if: github.event.issue.number == 29
+    steps:
+      - name: Comment with bounty program details
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: 29
+          body: |
+            ## Bug Bounty & Feature Request Program
+
+            Thank you for your interest in contributing to QuorumTrust!
+
+            We offer bounties for confirmed bugs and feature implementations as detailed in the issue description.
+
+            Please follow the guidelines in the issue to submit your reports or pull requests.
+
+            Maintainers will review submissions and determine bounty eligibility and amounts.
+
+            Happy hacking! 🛠️
